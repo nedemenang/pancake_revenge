@@ -30,15 +30,15 @@ func main() {
 
 func loop(s string) int {
 	b := strings.Split(s, "")
-	cur := b[0]
+	compare := b[0]
 	ans := 0
 	for i := 0; i < len(b); i++ {
-		if b[i] != cur {
+		if b[i] != compare {
 			ans++
-			cur = b[i]
+			compare = b[i]
 		}
 	}
-	if cur == "-" {
+	if compare == "-" {
 		ans++
 	}
 	return ans
